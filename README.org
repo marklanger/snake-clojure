@@ -5,6 +5,6 @@ https://www.youtube.com/watch?v=-XzSGPJRBsw
 
 ** License
 
-MIT 
+GPLv3 
 
-(NOTE: Unsure of original license from Brian Will or previous creators. All my contributions are MIT.)
+(NOTE: Looks like the original might have been based on a version of GPL. All my contributions are GPLv3.)
