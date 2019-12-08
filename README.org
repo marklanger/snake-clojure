@@ -1,0 +1,10 @@
+* snake-clojure
+
+This is a fork of the clojure snake tutorial by Brian Will on YouTube:
+https://www.youtube.com/watch?v=-XzSGPJRBsw
+
+** License
+
+MIT 
+
+(NOTE: Unsure of original license from Brian Will or previous creators. All my contributions are MIT.)
