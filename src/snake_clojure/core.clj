@@ -14,7 +14,11 @@
   {KeyEvent/VK_LEFT [-1 0]
    KeyEvent/VK_RIGHT [1 0]
    KeyEvent/VK_UP [0 -1]
-   KeyEvent/VK_DOWN [0 1]})
+   KeyEvent/VK_DOWN [0 1]
+   KeyEvent/VK_H [-1 0]
+   KeyEvent/VK_L [1 0]
+   KeyEvent/VK_K [0 -1]
+   KeyEvent/VK_J [0 1]})
 
 (defn create-snake []
   {:body (list [3 0] [2 0] [1 0] [0 0])
