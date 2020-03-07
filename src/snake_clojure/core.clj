@@ -8,7 +8,7 @@
 (def field-width 50)
 (def field-height 30)
 (def point-size 15)
-(def turn-millis 100)
+(def turn-millis 75)
 (def win-length 10)
 (def directions
   {KeyEvent/VK_LEFT [-1 0]
@@ -19,6 +19,16 @@
    KeyEvent/VK_L [1 0]
    KeyEvent/VK_K [0 -1]
    KeyEvent/VK_J [0 1]})
+
+(defn find-opposite-direction [direction]
+  (case direction
+    [-1 0] [1 0]
+    [1 0] [-1 0]
+    [0 1] [0 -1]
+    [0 -1] [0 1]))
+
+(defn is-opposite-direction? [direction-1 direction-2]
+  (= direction-1 (find-opposite-direction direction-2)))
 
 (defn create-snake []
   {:body (list [3 0] [2 0] [1 0] [0 0])
@@ -76,7 +86,8 @@
   nil)
 
 (defn update-direction [snake direction]
-  (dosync (alter snake turn direction))
+  (if (not (is-opposite-direction? direction (snake :direction)))
+    (dosync (alter snake turn direction)))
   nil)
 
 (defn reset-game [snake apple]
